@@ -1,23 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
+    <title>Face&Body Care🌸</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="stylesbfc.css" />
   </head>
   <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
-    </nav>
-    <main>
-      <h1>Home page</h1>
-    </main>
+    <div class="header" id="myHeader">
+      <h1 title="🌸 Face&Body Care 🌸">
+        🌸 Face&Body Care 🌸
+        <div class="headerbuttons">
+          <a href="./registrationpage.html">Sign up</a
+          ><a href="./brands.html">Brands</a
+          ><a href="./contacts.html">Contacts</a>
+        </div>
+      </h1>
+    </div>
+
+    <script>
+      window.onscroll = function () {
+        myFunction();
+      };
+
+      var header = document.getElementById('myHeader');
+      var sticky = header.offsetTop;
+
+      function myFunction() {
+        if (window.pageYOffset > sticky) {
+          header.classList.add('sticky');
+        } else {
+          header.classList.remove('sticky');
+        }
+      }
+    </script>
   </body>
 </html>
